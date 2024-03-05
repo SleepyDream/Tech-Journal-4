@@ -3,7 +3,6 @@
 #creates a new ssh user using $1 parameter
 #adds a public key from the local repo or curled from the remote repo
 sudo useradd -m -s /bin/bash "$1"
-sudo passwd "$1"
 
 sudo usermod -aG ssh "$1"
 
