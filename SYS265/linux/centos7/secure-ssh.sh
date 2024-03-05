@@ -4,7 +4,7 @@
 #adds a public key from the local repo or curled from the remote repo
 sudo useradd -m -s /bin/bash "$1"
 
-sudo usermod -aG ssh "$1"
+sudo mkdir /home/"$1"/.ssh
 
 sudo cp SYS265/linux/public-keys/id_rsa.pub /home/"$1"/.ssh/authorized_keys
 sudo chmod 700 /home/"$1"/.ssh
